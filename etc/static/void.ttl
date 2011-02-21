@@ -1,0 +1,15 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://geoplanet.dataincubator.org/>
+    dct:description "A conversion of the Yahoo! Geoplanet dataset into RDF" ;
+    dct:source <http://developer.com/geo/geoplanet> ;
+    dct:title "Yahoo! GeoPlanet" ;
+    void:exampleResource <http://geoplanet.dataincubator.org/place/2347703> ;
+    void:uriRegexPattern "http://data.kasabi.com/dataset/geoplanet.+" ;
+    a void:Dataset .
+

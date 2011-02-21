@@ -1,0 +1,61 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix geop: <http://data.kasabi.com/dataset/geoplanet/schema/> .
+
+<http://data.kasabi.com/dataset/geoplanet/schema/>
+  a owl:Ontology;
+  rdfs:label "Schema for the Yahoo Geoplanet dataset";
+  rdfs:seeAlso geop:Place;
+  rdfs:seeAlso geop:woeid.
+  
+geop:Place a rdfs:Class;
+  rdfs:label "Place";
+  rdfs:comment "A type of place defined by Yahoo Geoplanet";
+  rdfs:isDefinedBy <http://data.kasabi.com/dataset/geoplanet/schema>.
+    
+geop:woeid a rdf:Property;
+  rdfs:label "where on earth identifier";
+  rdfs:comment "A unique identifier defined in the Geoplanet dataset";  
+  rdfs:isDefinedBy <http://data.kasabi.com/dataset/geoplanet/schema>.
+
+geop:Continent
+  rdfs:comment "One of the major land masses on the earth. GeoPlanet is built on a seven-continent model: Asia (24865671), Africa (24865670), North America (24865672), South America (24865673), Antarctica (28289421), Europe (24865675), and Pacific (Australia, New Zealand, and the other islands in the Pacific Ocean -- 24865674).".
+
+geop:Country
+  rdfs:comment "One of the countries and dependent territories defined by the ISO 3166-1 standard.".
+  
+geop:Admin
+  rdfs:comment "One of the primary administrative areas within a country. Place type names associated with this place type include: State, Province, Prefecture, Country, Region, Federal District.".
+  
+geop:Admin2
+  rdfs:comment "One of the secondary administrative areas within a country. Place type names associated with this place type include: County, Province, Parish, Department, District.".
+  
+geop:Admin3
+  rdfs:comment "One of the tertiary administrative areas within a country. Place type names associated with this place type include: Commune, Municipality, District, Ward.".
+  
+geop:Town
+  rdfs:comment "One of the major populated places within a country. This category includes incorporated cities and towns, major unincorporated towns and villages.".
+  
+geop:Suburb
+  rdfs:comment "One of the subdivisions within a town. This category includes suburbs, neighborhoods, wards.".
+  
+geop:PostalCode
+  rdfs:comment "One of the postal code areas within a country. This category includes both full postal codes (such as those in UK and CA) and partial postal codes. Examples include: SW1A 0AA (UK), 90210 (US), 179-0074 (JP).".
+  
+geop:Supername
+  rdfs:comment "A place that refers to a region consisting of multiple countries or an historical country that has been dissolved into current countries. Examples include Scandinavia, Latin America, USSR, Yugoslavia, Western Europe, and Central America.".
+  
+geop:Colloquial
+  rdfs:comment "Examples are New England, French Riviera, 関西地方(Kansai Region), South East England, Pacific States, and Chubu Region.".
+  
+
+geop:TimeZone
+  rdfs:comment "A place that refers to an area defined by the Olson standard. Examples include America/Los Angeles, Asia/Tokyo, Europe/Madrid.".                  
+  
