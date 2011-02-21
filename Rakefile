@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'rake'
 require 'rake/clean'
-require 'pho'
 
 CACHE_DIR="data/cache"
 RDF_DIR="data/nt"
