@@ -9,6 +9,9 @@ CLEAN.include ["#{RDF_DIR}/*.nt"]
 
 #Helper function to create data dirs
 def mkdirs()
+  if !File.exists?("data")
+    Dir.mkdir("data")
+  end  
   if !File.exists?(CACHE_DIR)
     Dir.mkdir(CACHE_DIR)
   end
