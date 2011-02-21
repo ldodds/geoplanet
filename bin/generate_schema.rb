@@ -1,3 +1,5 @@
+$:.unshift File.join(File.dirname(__FILE__), "..", "lib")
+
 types = []
 File.open(ARGV[0], "r").each_line("\n") do |line|
   types << line.chomp
