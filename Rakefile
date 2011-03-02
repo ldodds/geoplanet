@@ -54,3 +54,9 @@ task :generate_schema do
 end
 
 task :convert => [:init, :generate_schema, :convert_adjacencies, :convert_aliases, :convert_places, :convert_static]
+  
+task :package do
+  sh %{gzip #{DATA_DIR}/*} 
+end
+
+task :publish => [:download, :convert, :package]  
