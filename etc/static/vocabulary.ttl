@@ -7,9 +7,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix geop: <http://data.kasabi.com/dataset/geoplanet/schema/> .
+@prefix geop: <http://data.kasabi.com/dataset/yahoo-geoplanet/schema/> .
 
-<http://data.kasabi.com/dataset/geoplanet/schema/>
+<http://data.kasabi.com/dataset/yahoo-geoplanet/schema/>
   a owl:Ontology;
   rdfs:label "Schema for the Yahoo Geoplanet dataset";
   rdfs:seeAlso geop:Place;
@@ -18,12 +18,12 @@
 geop:Place a rdfs:Class;
   rdfs:label "Place";
   rdfs:comment "A type of place defined by Yahoo Geoplanet";
-  rdfs:isDefinedBy <http://data.kasabi.com/dataset/geoplanet/schema>.
+  rdfs:isDefinedBy <http://data.kasabi.com/dataset/yahoo-geoplanet/schema>.
     
 geop:woeid a rdf:Property;
   rdfs:label "where on earth identifier";
   rdfs:comment "A unique identifier defined in the Geoplanet dataset";  
-  rdfs:isDefinedBy <http://data.kasabi.com/dataset/geoplanet/schema>.
+  rdfs:isDefinedBy <http://data.kasabi.com/dataset/yahoo-geoplanet/schema>.
 
 geop:Continent
   rdfs:comment "One of the major land masses on the earth. GeoPlanet is built on a seven-continent model: Asia (24865671), Africa (24865670), North America (24865672), South America (24865673), Antarctica (28289421), Europe (24865675), and Pacific (Australia, New Zealand, and the other islands in the Pacific Ocean -- 24865674).".

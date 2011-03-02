@@ -31,7 +31,7 @@ class Place
   def statements()
     
     statements = []
-    geop = RDF::Vocabulary.new("http://data.kasabi.com/dataset/geoplanet/schema/")
+    geop = RDF::Vocabulary.new("http://data.kasabi.com/dataset/yahoo-geoplanet/schema/")
     spatial = RDF::Vocabulary.new("http://data.ordnancesurvey.co.uk/ontology/spatialrelations/")
     admin_geo = RDF::Vocabulary.new("http://statistics.data.gov.uk/def/administrative-geography/")    
      

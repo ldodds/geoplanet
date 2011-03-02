@@ -106,7 +106,7 @@ module Util
     if path.start_with?("http")
       return path
     end  
-    return "http://data.kasabi.com/dataset/geoplanet#{path}"
+    return "http://data.kasabi.com/dataset/yahoo-geoplanet#{path}"
   end
       
   def Util.readable_label(name)

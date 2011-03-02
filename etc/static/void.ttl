@@ -5,11 +5,11 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 
-<http://geoplanet.dataincubator.org/>
+<http://data.kasabi.com/dataset/yahoo-geoplanet>
     dct:description "A conversion of the Yahoo! Geoplanet dataset into RDF" ;
     dct:source <http://developer.com/geo/geoplanet> ;
     dct:title "Yahoo! GeoPlanet" ;
-    void:exampleResource <http://geoplanet.dataincubator.org/place/2347703> ;
+    void:exampleResource <http://data.kasabi.com/dataset/yahoo-geoplanet/place/2347703> ;
     void:uriRegexPattern "http://data.kasabi.com/dataset/geoplanet.+" ;
     a void:Dataset .
 
