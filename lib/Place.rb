@@ -39,8 +39,9 @@ class Place
 
     statements << RDF::Statement.new( uri, RDF::DC.identifier, RDF::Literal.new( @woeid ) )
     
-    type = RDF::URI.new( "http://purl.org/net/schemas/geop/#{@place_type_code}" )  
+    type = RDF::URI.new( "http://data.kasabi.com/dataset/yahoo-geoplanet/schema/#{@place_type_code}" )  
     statements << RDF::Statement.new( uri, RDF.type, type )
+    statements << RDF::Statement.new( type, RDF::RDFS.subClassOf, geop.Place)
     
     statements << RDF::Statement.new( uri, geop.woeid, RDF::Literal.new( @woeid ) )
         
@@ -67,6 +68,19 @@ class Place
       #assert equivalence between the different uris for the country
       statements << RDF::Statement.new( uri, RDF::OWL.sameAs, country )
     end
+
+    #If it's a uk "zip code"    
+    if ( @place_type_code == "Zip" && @isocountry == "GB" )
+      #"and matches the regex from http://regexlib.com/REDetails.aspx?regexp_id=260
+      if @preferred_name.match(/^([A-PR-UWYZ0-9][A-HK-Y0-9][AEHMNPRTVXY0-9]?[ABEHMNPRVWXY0-9]? {1,2}[0-9][ABD-HJLN-UW-Z]{2}|GIR 0AA)$/)
+        #then its a post code, so link to OS data
+        postcodeunit = RDF::URI.new( "http://data.ordnancesurvey.co.uk/id/postcodeunit/#{@preferred_name.gsub(" ", "")}")
+        statements << RDF::Statement.new( uri, RDF::OWL.sameAs, postcodeunit )
+        statements << RDF::Statement.new( postcodeunit, RDF::OWL.sameAs, uri )
+      end
+    end
+    
+    
     
     return statements
     
